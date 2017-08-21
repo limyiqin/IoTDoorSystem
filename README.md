@@ -302,10 +302,10 @@ In the Attach things to certificates(s) dialog box, select the check box next to
 
 # :exclamation: Expected Outcome
 
-![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/e1.jpg)
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee1.jpg)
 
-![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/e2.jpg)
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee2.jpg)
 
-![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/e3.jpg)
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee3.jpg)
 
-![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/e4.jpg)
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee4.jpg)
