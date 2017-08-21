@@ -20,7 +20,7 @@ home or not.
 
 1. 2 Raspberry Pi with Raspberry Pi Camera
 2. 2 Main GPIO BreadBoard and 1 Mini BreadBoard
-3. A lot of Jumper Wires(refer to Fritzing Diagram)
+3. A lot of Jumper Wires(8 inside and 18 outside)[May need more wires for extension if you plan to do like what we did]
 4. 2 Red LED light and 1 Green LED Light
 5. 1 Buzzer
 6. 1 Button
