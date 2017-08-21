@@ -299,3 +299,13 @@ In the Attach things to certificates(s) dialog box, select the check box next to
 
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot23.png)
 
+
+# :exclamation: Expected Outcome
+
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/e1.jpg)
+
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/e2.jpg)
+
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/e3.jpg)
+
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/e4.jpg)
