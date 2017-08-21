@@ -129,11 +129,6 @@ Go to User>Add user, add a user, this will be used for self-authentication purpo
 ## :exclamation: Amazon Web Services(AWS) S3 Bucket Setup
 If you have not created an account for AWS, create one. Once you have an account, follow the steps below:
 
-**IoT Service Setup**
-
-
-**S3 Storage Setup**
-
 On the AWS Console, search for 's3' Click on the first one you see
 
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/s3_1.JPG)
