@@ -57,7 +57,6 @@ For SPI-Py Library
 git clone https://github.com/lthiery/SPI-Py.git
 cd /home/pi/SPI-Py
 sudo python setup.py install
-
 ```
 
 For Pyrebase(Firebase SDK for Python)
