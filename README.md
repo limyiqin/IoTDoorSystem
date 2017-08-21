@@ -20,7 +20,7 @@ home or not.
 
 1. 2 Raspberry Pi with Raspberry Pi Camera
 2. 2 Main GPIO BreadBoard and 1 Mini BreadBoard
-3. A lot of Jumper Wires(8 inside and 18 outside)[May need more wires for extension if you plan to do like what we did]
+3. A lot of Jumper Wires(refer to Fritzing Diagram)
 4. 2 Red LED light and 1 Green LED Light
 5. 1 Buzzer
 6. 1 Button
@@ -196,4 +196,107 @@ iotdoorbell_bot. Follow the steps i did below.
 Once done save the API Key in a notepad. The key will be used in the main python Start talking to your new bot by saying /start.
 
 ## :exclamation: Amazon Web Services(AWS) Message Broker Setup
+
+Sign in with your AWS console at https://aws.amazon.com
+
+In the AWS dashboard, type “AWS IoT” to access the AWS IoT service.
+
+iot1
+
+On the Welcome page, choose Get started
+
+iot2
+
+Now register your Raspberry PI as a Thing
+
+In the left navigation pane, click “Registry” to expand it, then choose “Things”
+
+iot 3
+
+On the page that says “You don’t have any things yet”, choose “Register a thing”
+If you have created a thing before, choose Create.
+
+iot4
+
+A thing represents a device whose status or data is stored in the AWS cloud. The Thing Shadows is the state of the device, e.g. is it “on” or “off”, is it “red” or “green” etc.
+
+Our “thing” here is our RPi, so let’s type “MyRaspberryPi” for the name
+Click “Create thing”
+
+iot 5
+
+On the Details page, choose Interact
+
+iot 6
+
+Copy and paste the REST API endpoint into a Notepad. You will need this value later.
+
+iot7
+
+Next we are going to Create Certificates
+
+Choose Security
+
+iot 8
+
+Choose “Create certificate” to generate an X.509 certificate and key pair
+
+iot9
+
+After a while, you should see the following screen, where there are a total of four download links
+
+iot10
+
+Create a working directory called deviceSDK and download all the 4 files above in this deviceSDK directory, renaming them with friendly names like what I have done.
+
+iot11
+
+Next, click the “Activate” button.
+Almost immediately, you should see “Successfully activated certificate” and the Activate button changes to “Deactivate”
+
+iot12
+
+Next choose Security Policy for your RPI
+
+Click on the “Attach a policy” button that is near the bottom right-hand corner of the page.
+
+iot13
+
+On the next page, choose “Create new policy”
+
+iot14
+
+On the Create a policy page, key in the following configuration and then click “Create”
+
+iot15
+
+iot16
+
+iot 17
+
+You will see a page similar to that below, move ahead to click the “Back” arrow to return to the previous page and contibue with the instructions in next section.
+
+iot 18
+
+You will see a page similar to that below, move ahead to click the “Back” arrow to return to the previous page and contibue with the instructions in next section.
+
+iot 19
+
+The X.509 certificate you created earlier is shown. Click the checkboc beside it, then click “Actions” button and choose “Attach Policy”
+
+iot 20
+
+Check the “MyRaspberryPiSecurityPolicy” you created earlier and click “Attch” button.
+
+iot 21
+
+Let’s attach the “Thing” to this certificate
+Click “Actions” button and choose “Attach Thing”
+
+iot 22
+
+In the Attach things to certificates(s) dialog box, select the check box next to the thing you created to represent your Raspberry Pi, and then choose Attach
+
+iot 23
+
 
