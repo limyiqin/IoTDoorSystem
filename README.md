@@ -314,10 +314,13 @@ Unlocking door using a correct card
 Locking door using a correct card
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee4.jpg)
 
-UI of Webpage
+**UI of Webpage**
 
-![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/a.jpg)
-
+Overview Page
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/b.jpg)
 
+Doorbell Log Page
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/a.jpg)
+
+Card Log Page
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/c.jpg)
