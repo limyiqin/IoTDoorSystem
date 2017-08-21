@@ -302,10 +302,22 @@ In the Attach things to certificates(s) dialog box, select the check box next to
 
 # :exclamation: Expected Outcome
 
+Pressing doorbell when no one at home
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee1.jpg)
 
+Pressing doorbell when someone is at home
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee2.jpg)
 
+Unlocking door using a correct card
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee3.jpg)
 
+Locking door using a correct card
 ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/ee4.jpg)
+
+UI of Webpage
+
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/a.jpg)
+
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/b.jpg)
+
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/c.jpg)
