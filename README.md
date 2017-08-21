@@ -20,7 +20,7 @@ home or not.
 
 1. 2 Raspberry Pi with Raspberry Pi Camera
 2. 2 Main GPIO BreadBoard and 1 Mini BreadBoard
-3. A lot of Jumper Wires(refer to Fritzing Diagram)
+3. A lot of Jumper Wires(8 inside and 18 outside)[May need more wires for extension if you plan to do like what we did]
 4. 2 Red LED light and 1 Green LED Light
 5. 1 Buzzer
 6. 1 Button
@@ -201,102 +201,101 @@ Sign in with your AWS console at https://aws.amazon.com
 
 In the AWS dashboard, type “AWS IoT” to access the AWS IoT service.
 
-iot1
+ ![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot1.png)
 
 On the Welcome page, choose Get started
 
-iot2
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot2.png)
 
 Now register your Raspberry PI as a Thing
 
 In the left navigation pane, click “Registry” to expand it, then choose “Things”
 
-iot 3
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot3.png)
 
 On the page that says “You don’t have any things yet”, choose “Register a thing”
 If you have created a thing before, choose Create.
 
-iot4
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot4.png)
 
 A thing represents a device whose status or data is stored in the AWS cloud. The Thing Shadows is the state of the device, e.g. is it “on” or “off”, is it “red” or “green” etc.
 
 Our “thing” here is our RPi, so let’s type “MyRaspberryPi” for the name
 Click “Create thing”
 
-iot 5
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot5.png)
 
 On the Details page, choose Interact
 
-iot 6
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot6.png)
 
 Copy and paste the REST API endpoint into a Notepad. You will need this value later.
 
-iot7
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot7.png)
 
 Next we are going to Create Certificates
 
 Choose Security
 
-iot 8
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot8.png)
 
 Choose “Create certificate” to generate an X.509 certificate and key pair
 
-iot9
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot9.png)
 
 After a while, you should see the following screen, where there are a total of four download links
 
-iot10
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot10.png)
 
 Create a working directory called deviceSDK and download all the 4 files above in this deviceSDK directory, renaming them with friendly names like what I have done.
 
-iot11
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot11.png)
 
 Next, click the “Activate” button.
 Almost immediately, you should see “Successfully activated certificate” and the Activate button changes to “Deactivate”
 
-iot12
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot12.png)
 
 Next choose Security Policy for your RPI
 
 Click on the “Attach a policy” button that is near the bottom right-hand corner of the page.
 
-iot13
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot13.png)
 
 On the next page, choose “Create new policy”
 
-iot14
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot14.png)
 
 On the Create a policy page, key in the following configuration and then click “Create”
 
-iot15
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot15.png)
 
-iot16
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot16.png)
 
-iot 17
-
-You will see a page similar to that below, move ahead to click the “Back” arrow to return to the previous page and contibue with the instructions in next section.
-
-iot 18
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot17.png)
 
 You will see a page similar to that below, move ahead to click the “Back” arrow to return to the previous page and contibue with the instructions in next section.
 
-iot 19
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot18.png)
+
+You will see a page similar to that below, move ahead to click the “Back” arrow to return to the previous page and contibue with the instructions in next section.
+
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot19.png)
 
 The X.509 certificate you created earlier is shown. Click the checkboc beside it, then click “Actions” button and choose “Attach Policy”
 
-iot 20
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot20.png)
 
 Check the “MyRaspberryPiSecurityPolicy” you created earlier and click “Attch” button.
 
-iot 21
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot21.png)
 
 Let’s attach the “Thing” to this certificate
 Click “Actions” button and choose “Attach Thing”
 
-iot 22
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot22.png)
 
 In the Attach things to certificates(s) dialog box, select the check box next to the thing you created to represent your Raspberry Pi, and then choose Attach
 
-iot 23
-
+![](https://s3-ap-southeast-1.amazonaws.com/dmitiotdoorbell/Github+image+hosting/iot23.png)
 
