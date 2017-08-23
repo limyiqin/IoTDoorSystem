@@ -45,38 +45,13 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-
-
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a onclick="logout();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -92,10 +67,10 @@
                             <div class="input-group custom-search-form">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
                             </div>
                             <!-- /input-group -->
                         </li>
@@ -146,7 +121,7 @@
                                     </thead>
                                     <tbody id="DoorbellLogTableBody">
                                         <tr v-for="myLog in logData">
-                                        
+                                            
                                             <td>{{myLog.type}}</td>
                                             <td>{{myLog.status}}</td>
                                             <td>{{myLog.doorstatus}}</td>
@@ -168,46 +143,55 @@
             </div>
             <!-- /.row -->
 
-        <!-- /#page-wrapper -->
-    </div>
-    <!-- /#wrapper -->
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
-    <script src="../vendor/vue.js"></script>
+        <script src="../vendor/vue.js"></script>
 
-    <script src="../vendor/moment/moment.js"></script>
+        <script src="../vendor/moment/moment.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="../dist/js/sb-admin-2.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 
-</body>
+    </body>
 
-</html>
+    </html>
 
-<script>
+    <script>
 
- var logList = new Array();
+        if (sessionStorage.getItem("Session") === null){
+            window.location.replace("login.html")
+        }
 
-  var config = {
-    apiKey: "AIzaSyCnI-Btv-OsH_gzM95DGiJlgaHEY65g5gA",
-    authDomain: "smart-doorbell-70f05.firebaseapp.com",
-    databaseURL: "https://smart-doorbell-70f05.firebaseio.com",
-    storageBucket: "smart-doorbell-70f05.appspot.com",
-    serviceAccount: "Smart Doorbell-3623a7bf1105.json"
-  };
-  firebase.initializeApp(config);
+        function logout(){
+            sessionStorage.clear();
+            window.location.replace("login.html")
+        }
 
-  firebase.auth().signInWithEmailAndPassword("jewistan00@gmail.com", "P@ssw0rd").catch(function(error) {
+        var logList = new Array();
+
+        var config = {
+            apiKey: "",
+            authDomain: "",
+            databaseURL: "",
+            storageBucket: "",
+            serviceAccount: ""
+        };
+        firebase.initializeApp(config);
+
+        firebase.auth().signInWithEmailAndPassword("email", "P@ssw0rd").catch(function(error) {
 // Handle Errors here.
 var errorCode = "999";
 var errorMessage = "Authentication Error";
@@ -220,22 +204,22 @@ var database = firebase.database();
 var logDataRef = firebase.database().ref("Card_Log");
 logDataRef.on("value", function(snapshot) {
     logList.length=0;
-  snapshot.forEach(function(childSnapshot) {
+    snapshot.forEach(function(childSnapshot) {
     // key will be "ada" the first time and "alan" the second time
     var key = childSnapshot.key;
     // childData will be the actual contents of the child
     var childData = childSnapshot.val();
     logList.push(childData); 
-  });
+});
 });
 
 var vm = new Vue({
 
-        el: '#DoorbellLogTableBody',
-        data: {
-            logData: logList
-        },
-        methods: {
+    el: '#DoorbellLogTableBody',
+    data: {
+        logData: logList
+    },
+    methods: {
             //this will be the function that will run if when user calls sysnopsisUrl Property
             formatDate: function (value) {
                 return (function () {
